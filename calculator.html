@@ -1,49 +1,99 @@
 <html>
-<head>
-<title> AADI HTML </title>
-</head>
-<body>
-<BODY BGCOLOR = "grey">
-<a href="list.html">Go Back</a>
-<h1><b><u><i>CALCULATOR</h1><br>
-<h4>BY AADI AGGARWAL</h4><br>
-first number : <input type="number" id="firstnumber" maxlength="8"/><br>
-second number : <input type="number" id="secondnumber"maxlength="8"/><br>
-<button type="button" onclick="sumOfNumber()" >+</button>
-<button type="button" onclick="diffOfNumber()" >-</button>
-<button type="button" onclick="productOfNumber()" >*</button>
-<button type="button" onclick="divisonOfNumber()" >/</button>
+	<head>
+		<title> AADI HTML </title>
+		<style>
+		.my_button {
+			height: 50px;
+			width: 50px;
+			background: cyan;
+			border: none;
+			border-radius: 10px;
+			margin: 15px;
+		}
 
-</body>
-<script>
-function sumOfNumber(){
-var firstnumber = document.getElementById('firstnumber').value;
-var secondnumber = document.getElementById('secondnumber').value;
-var result = parseInt( firstnumber ) +  parseInt(secondnumber);
-alert("sum is : "+result);
-}
+		.my_bold {
+		font-weight: bold;
+		font-size: 30px;
+		}
+		
+		.my_center {
+		    margin: auto;
+			width: 50%;
+		}
+		#firstNumber, #secondNumber{
+			height: 30px;
+			border: solid brown
+		}
+		table, table > thead > tr > th, table > tbody > tr > td {
+			border : 1px solid black;
+		}
+		</style>
+	</head>
+	
+	
+	<body bgcolor="antiquewhite">
+		<a href="list.html">Go Back</a>
+		<h1><b><u><i>CALCULATOR</i></u></b></h1><br>
+		<h4>BY AADI AGGARWAL</h4><br>
+		<div class="my_center">
+			<table>
+				<tbody>
+					<tr>
+						<td colspan="2">Result : </td>
+						<td colspan="2"><input type="text" id="result" readonly /></td>
+					</tr>
+					<tr>
+						<td colspan="2">First number : </td>
+						<td colspan="2"><input type="number" id="firstNumber" maxlength="8"/></td>
+					</tr>
+					<tr>
+						<td colspan="2">Second number : </td>
+						<td colspan="2"><input type="number" id="secondNumber"maxlength="8"/></td>
+					</tr>
+					<tr>
+						<td style="width:25%"><button type="button" class="my_button my_bold" onclick="sumOfNumber()" >+</button></td>
+						<td style="width:25%"><button type="button" class="my_button my_bold" onclick="diffOfNumber()" >-</button></td>
+						<td style="width:25%"><button type="button" class="my_button my_bold" onclick="productOfNumber()" >*</button></td>
+						<td style="width:25%"><button type="button" class="my_button my_bold" onclick="divisonOfNumber()" >/</button></td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+	</body>
 
-function diffOfNumber(){
-var firstnumber = document.getElementById('firstnumber').value;
-var secondnumber = document.getElementById('secondnumber').value;
-var result = firstnumber - secondnumber;
-alert("diff is : "+result);
-}
-
-function productOfNumber(){
-var firstnumber = document.getElementById('firstnumber').value;
-var secondnumber = document.getElementById('secondnumber').value;
-var result = firstnumber * secondnumber;
-alert("product is : "+result);
-}
-
-function divisonOfNumber(){
-var firstnumber = document.getElementById('firstnumber').value;
-var secondnumber = document.getElementById('secondnumber').value;
-var result = firstnumber / secondnumber;
-alert("quotient is : "+result);
-
-
-}
-</script>
+	<script>
+	function sumOfNumber(){
+		var firstnumber = document.getElementById('firstNumber').value;
+		var secondnumber = document.getElementById('secondNumber').value;
+		var result = parseInt( firstnumber ) +  parseInt(secondnumber);
+		document.getElementById('result').value = result;
+		// alert("sum is : "+result);
+	}
+	function diffOfNumber(){
+		var firstnumber = document.getElementById('firstNumber').value;
+		var secondnumber = document.getElementById('secondNumber').value;
+		var result = firstnumber - secondnumber;
+		// alert("diff is : "+result);
+		document.getElementById('result').value = result;
+	}
+	function productOfNumber(){
+		var firstnumber = document.getElementById('firstNumber').value;
+		var secondnumber = document.getElementById('secondNumber').value;
+		var result = firstnumber * secondnumber;
+		// alert("product is : "+result);
+		document.getElementById('result').value = result;
+	}
+	function divisonOfNumber(){
+		var firstnumber = document.getElementById('firstNumber').value;
+		var secondnumber = document.getElementById('secondNumber').value;
+		var result = firstnumber / secondnumber;
+		// alert("quotient is : "+result);
+		document.getElementById('result').value = result;
+	}
+	</script>
 </html>
+
+
+
+
+
