@@ -1,66 +1,22 @@
 <html>
-   <head>
-      <title>My first page</title>
-   </head>
-   <body>
-      Hi My name is Aadi
-      <a href="second.html"><button style="background: red;border-radius: 5px;height: 50px;width: 100px;color: white;">Click here</button></a>
-      <table style="border:10px dotted red">
-         <thead>
-            <tr>
-               <th style="border:1px solid blue">S no</th>
-               <th style="border:1px solid blue">Option</th>
-			   <th style="border:1px solid blue">branch</th>
-			   <th style="border:1px solid blue">percentile</th>
-            </tr>
-         </thead>
-         <tbody>
-            <tr>
-               <td style="border:1px solid green">1</td>
-               <td style="border:1px solid green">IIT</td>
-			   <td style="border:6px solid green">cse</td>
-			   <td style="border:1px solid green">97</td>
-            </tr>
-            <tr>
-               <td style="border:1px solid green">2</td>
-               <td style="border:1px solid green">NIT</td>
-			   <td style="border:4px solid green">ece</td>
-			   <td style="border:1px solid green">99</td>
-            </tr>
-			<tr>
-               <td style="border:1px solid green">3</td>
-               <td style="border:1px solid green">iiiT</td>
-			   <td style="border:3px solid green">ee</td>
-			   <td style="border:1px solid green">95</td>
-            </tr>
-			<tr>
-               <td style="border:1px solid green">FINAl</td>
-			   <td colspan="3" style="border:1px solid green">ECE</td>
-            </tr>
-         </tbody>
-      </table>
-      <img style="border:8px dashed green;height:400px;width:800px" src="download.jpg"/><br/>
-      <p>Username : </p>
-      <input type="text" /><br/>
-      <p>Age : </p>
-      <input type="number" /><br/>
-      <p>Gender :  </p>
-      <input type="radio" name="gender"/> Male <input type="radio" name="gender"/> Female  <input type="radio" name="gender"/> Other<br/>
-      Car : 
-      <select>
-         <option>Volvo</option>
-         <option>Saab</option>
-         <option>Opel</option>
-         <option>Audi</option>
-      </select>
-      <br/>
-      <i><u><b>AAA</b></u></i>  <input type="checkbox" /><br/>
-      <h1>AADI AGG</h1>
-      <h2>AADI AGG</h2>
-      <h3>AADI AGG</h3>
-      <h4>AADI AGG</h4>
-      <h5>AADI AGG</h5>
-      <h6>AADI AGG</h6>
-      <p>AADI AGG</p>
-   </body>
+<head>
+<title>Login</title>
+</head>
+<body>
+Username : <input type="text" id="username" maxlength="6"/><br>
+Password : <input type="password" id="password"  maxlength="10" /><br>
+<button type="button" onclick="loginUser()" >Login</button>
+</body>
+<script>
+function loginUser(){
+var usrnme = document.getElementById('username').value;
+var pwd = document.getElementById('password').value;
+	if((usrnme == 'admin') && (pwd == 'aadi')){
+		location.replace("list.html");
+	} else {
+	 alert("Incorrect username or password !!");
+	}
+}
+
+</script>
 </html>

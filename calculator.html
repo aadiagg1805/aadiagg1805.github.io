@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> AADI HTML </title>
+</head>
+<body>
+<BODY BGCOLOR = "grey">
+<a href="list.html">Go Back</a>
+<h1><b><u><i>CALCULATOR</h1><br>
+<h4>BY AADI AGGARWAL</h4><br>
+first number : <input type="number" id="firstnumber" maxlength="8"/><br>
+second number : <input type="number" id="secondnumber"maxlength="8"/><br>
+<button type="button" onclick="sumOfNumber()" >+</button>
+<button type="button" onclick="diffOfNumber()" >-</button>
+<button type="button" onclick="productOfNumber()" >*</button>
+<button type="button" onclick="divisonOfNumber()" >/</button>
+
+</body>
+<script>
+function sumOfNumber(){
+var firstnumber = document.getElementById('firstnumber').value;
+var secondnumber = document.getElementById('secondnumber').value;
+var result = parseInt( firstnumber ) +  parseInt(secondnumber);
+alert("sum is : "+result);
+}
+
+function diffOfNumber(){
+var firstnumber = document.getElementById('firstnumber').value;
+var secondnumber = document.getElementById('secondnumber').value;
+var result = firstnumber - secondnumber;
+alert("diff is : "+result);
+}
+
+function productOfNumber(){
+var firstnumber = document.getElementById('firstnumber').value;
+var secondnumber = document.getElementById('secondnumber').value;
+var result = firstnumber * secondnumber;
+alert("product is : "+result);
+}
+
+function divisonOfNumber(){
+var firstnumber = document.getElementById('firstnumber').value;
+var secondnumber = document.getElementById('secondnumber').value;
+var result = firstnumber / secondnumber;
+alert("quotient is : "+result);
+
+
+}
+</script>
+</html>
