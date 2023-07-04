@@ -20,25 +20,54 @@ hi my name is aadi and i am learning html
 </tr>
 </tbody>
 </table>
+<br>
 
-<input type="file"/>
+<input type="file" accept="image/*" onchange="changeImage(this)"/>
+<br><br>
+<a href="javascript:void(0);" id="largerImage" onclick="enlargeImageSize()">See Larger image</a>
+<a href="javascript:void(0);" id="smallerImage" style="display:none;" onclick="compressImageSize()">See Smaller image</a><br><br>
+<img id="imageFrame" style="border:4px dashed green;height:250px;width:250px" src="download.png"/><br/><br>
 
- <img style="border:8px dashed green;height:400px;width:800px" src="download.jpg"/><br/>
-      <p>Username : </p>
-      <input type="text" /><br/>
-      <p>Age : </p>
-      <input type="number" /><br/>
-      <p>Gender :  </p>
-      <input type="radio" name="gender"/> Male <input type="radio" name="gender"/> Female  <input type="radio" name="gender"/> Other<br/>
-      Car : 
-      <select>
-         <option>Volvo</option>
-         <option>Saab</option>
-         <option>Opel</option>
-         <option>Audi</option>
-      </select>
-      <br/>
-      <i><u><b>AAA</b></u></i>  <input type="checkbox" /><br/>
+
+<p>Username : </p>
+<input type="text" /><br/>
+<p>Age : </p>
+<input type="number" /><br/>
+<p>Gender :  </p>
+<input type="radio" name="gender"/> Male <input type="radio" name="gender"/> Female  <input type="radio" name="gender"/> Other<br/>
+Car : 
+<select>
+   <option>Volvo</option>
+   <option>Saab</option>
+   <option>Opel</option>
+   <option>Audi</option>
+</select>
+<br/>
+<i><u><b>AAA</b></u></i>  <input type="checkbox" /><br/>
 	  
 </body>
+<script>
+function changeImage(obj){
+	document.getElementById('imageFrame').src = window.URL.createObjectURL(obj.files[0]);
+	document.getElementById('imageFrame').style.height="250px";
+	document.getElementById('imageFrame').style.width="250px";
+	document.getElementById('largerImage').style.display="block";
+	document.getElementById('smallerImage').style.display="none";
+}
+
+function enlargeImageSize(){
+	document.getElementById('imageFrame').style.height="500px";
+	document.getElementById('imageFrame').style.width="500px";
+	document.getElementById('largerImage').style.display="none";
+	document.getElementById('smallerImage').style.display="block";
+}
+
+function compressImageSize(){
+	document.getElementById('imageFrame').style.height="250px";
+	document.getElementById('imageFrame').style.width="250px";
+	document.getElementById('largerImage').style.display="block";
+	document.getElementById('smallerImage').style.display="none";
+}
+
+</script>
 </html>
